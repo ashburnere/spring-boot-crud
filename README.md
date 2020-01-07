@@ -20,7 +20,7 @@ Change JDBC URL to jdbc:h2:mem:testdb
 ## Rest Endpoint
 [http://localhost:8080/api/books](http://localhost:8080/api/books)
 
-Swagger UI: ([http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html)).
+Swagger UI: ([http://localhost:8080/swagger-ui.html](http://localhost:8081/swagger-ui.html)).
 
 ## CLI
 [![Build Status](https://travis-ci.com/ashburnere/spring-boot-crud.svg?branch=master)](https://travis-ci.com/ashburnere/spring-boot-crud)

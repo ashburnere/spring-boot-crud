@@ -1,0 +1,16 @@
+bookStoreEntities:
+   - id: 1
+     bookStoreName: "Test"
+     isbn: 123456789
+     title: "Book 1"
+     author: "A 1"
+   - id: 2
+     bookStoreName: "Test"
+     isbn: 222
+     title: "Book 2"
+     author: "A 2"
+   - id: 3
+     bookStoreName: "Test"
+     isbn: 33
+     title: "Book 3"
+     author: "A 3"
