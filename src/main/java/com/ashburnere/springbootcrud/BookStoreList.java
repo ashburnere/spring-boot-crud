@@ -2,12 +2,20 @@ package com.ashburnere.springbootcrud;
 
 import java.util.List;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@NoArgsConstructor
 public class BookStoreList {
 
 	private List<BookStoreEntity> bookStoreEntities;
+
+	public BookStoreList() {
+	}
+
+	public List<BookStoreEntity> getBookStoreEntities() {
+		return bookStoreEntities;
+	}
+
+	public void setBookStoreEntities(List<BookStoreEntity> bookStoreEntities) {
+		this.bookStoreEntities = bookStoreEntities;
+	}
+
+
 }

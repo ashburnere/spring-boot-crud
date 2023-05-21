@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 
 import com.github.javafaker.Faker;
 
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Component
 public class BookDataInitializer implements CommandLineRunner {
+
+	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(BookDataInitializer.class);
 
 	@Autowired
 	private BookRepository bookRepository;
