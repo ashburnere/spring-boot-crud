@@ -2,6 +2,8 @@ package com.ashburnere.springbootcrud;
 
 import java.util.UUID;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -12,7 +14,7 @@ import com.github.javafaker.Faker;
 @Component
 public class BookDataInitializer implements CommandLineRunner {
 
-	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(BookDataInitializer.class);
+	private static final Logger log = LoggerFactory.getLogger(BookDataInitializer.class);
 
 	@Autowired
 	private BookRepository bookRepository;
@@ -29,6 +31,7 @@ public class BookDataInitializer implements CommandLineRunner {
 			book.setAuthor(faker.book().author());
 			book.setTitle(faker.book().title());
 
+			log.info("Created new book: " + book.getTitle());
 			this.bookRepository.save(book);
 		}
 

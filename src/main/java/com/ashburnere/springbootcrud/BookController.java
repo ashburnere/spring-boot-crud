@@ -35,7 +35,7 @@ public class BookController {
 		HttpHeaders headers = new HttpHeaders();
 		headers.setLocation(uriComponents.toUri());
 
-		return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
+		return new ResponseEntity<>(headers, HttpStatus.CREATED);
 	}
 
 	@GetMapping

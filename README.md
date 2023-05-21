@@ -1,5 +1,5 @@
 # Spring Boot CRUD
-Crud Demo with Spring Boot using JPA and a H2 DB. 
+Crud Demo with Spring Boot using Swagger, JPA and H2 DB. 
 
 See also [https://rieckpil.de/howto-crud-application-with-spring-boot-2-2-java-11-and-h2/](https://rieckpil.de/howto-crud-application-with-spring-boot-2-2-java-11-and-h2/)
 

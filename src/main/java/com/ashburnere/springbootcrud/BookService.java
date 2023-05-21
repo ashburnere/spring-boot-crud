@@ -3,12 +3,16 @@ package com.ashburnere.springbootcrud;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class BookService {
+
+	private static final Logger log = LoggerFactory.getLogger(BookService.class);
 
 	@Autowired
 	private BookRepository bookRepository;
@@ -20,6 +24,8 @@ public class BookService {
 		book.setTitle(bookRequest.getTitle());
 
 		book = bookRepository.save(book);
+
+		log.info("Created new book: " + book.getTitle());
 
 		return book.getId();
 	}
@@ -53,11 +59,15 @@ public class BookService {
 		bookToUpdate.setIsbn(bookToUpdateRequest.getIsbn());
 		bookToUpdate.setTitle(bookToUpdateRequest.getTitle());
 
+		log.info("Updated book with ID: " + bookToUpdate.getId());
+
 		return bookToUpdate;
 	}
 
 	public void deleteBookById(Long id) {
 		bookRepository.deleteById(id);
+
+		log.info("Deleted book with ID: " + id);
 	}
 
 }
